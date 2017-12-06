@@ -1,9 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.pesteam.paditech_android_huynq_first.Screen_1">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#45C465"/>
 
-</android.support.constraint.ConstraintLayout>
+        <View
+            android:layout_width="142dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/green_text_line"/>
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </GridView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#F93B4A"/>
+
+        <View
+            android:layout_width="142dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/red_text_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#AE68E9"/>
+
+        <View
+            android:layout_width="142dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/violet_text_line"/>
+    </LinearLayout>
+</LinearLayout>
