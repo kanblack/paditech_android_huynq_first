@@ -8,7 +8,7 @@
             >
             <rotate
                 android:fromDegrees="-22"
-                android:toDegrees=""
+                android:toDegrees="-22"
                 android:pivotX="50%"
                 android:pivotY="50%" >
                 <shape

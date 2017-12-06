@@ -6,57 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.pesteam.paditech_android_huynq_first.Screen_1">
-    <LinearLayout
-        android:orientation="horizontal"
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#45C465"/>
+        android:layout_height="match_parent"
+        android:id="@+id/list_view">
 
-        <View
-            android:layout_width="142dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/green_text_line"/>
-    </LinearLayout>
-
-    <GridView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </GridView>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#F93B4A"/>
-
-        <View
-            android:layout_width="142dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/red_text_line"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#AE68E9"/>
-
-        <View
-            android:layout_width="142dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/violet_text_line"/>
-    </LinearLayout>
+    </ListView>
 </LinearLayout>
