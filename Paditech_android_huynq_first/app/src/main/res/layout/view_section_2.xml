@@ -9,30 +9,47 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_weight="1"
-            android:background="#e21c1c"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:background="#e21c1c">
+            <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_image"
+            android:orientation="vertical"
             android:gravity="bottom">
-            <TextView
+                <TextView
                 android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="sadsdadasd"
                 android:textColor="#FFFFFF"
                 android:background="#4cff6a00"/>
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="bottom">
-            <TextView
-                android:paddingLeft="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="sadsdadasd"/>
+            >
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_image"
+                android:orientation="vertical"
+                android:gravity="bottom">
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="sadsdadasd"
+                    android:textColor="#FFFFFF"
+                    android:background="#4cff6a00"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -45,12 +62,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="bottom">
+            >
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:background="@drawable/background_image">
             <TextView
-                android:paddingLeft="15dp"
-                android:layout_width="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="sadsdadasd"/>
+                android:text="sadsdadasd"
+                android:textColor="#FFFFFF"
+                android:background="#4cff6a00"/>
+        </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
@@ -58,12 +85,22 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="#e21c1c"
-            android:gravity="bottom">
+            >
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:background="@drawable/background_image">
             <TextView
-                android:paddingLeft="15dp"
-                android:layout_width="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="sadsdadasd"/>
+                android:text="sadsdadasd"
+                android:textColor="#FFFFFF"
+                android:background="#4cff6a00"/>
+        </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
