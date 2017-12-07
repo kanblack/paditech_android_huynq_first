@@ -5,19 +5,19 @@
     android:orientation="horizontal"
     android:layout_height="250dp">
 
-    <com.github.pavlospt.CircleView
+    <LinearLayout
+        android:src="@drawable/back_ground_text_p0_gach"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cv_titleText="sdsd"
         />
 
-    <com.github.pavlospt.CircleView
+    <LinearLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <com.github.pavlospt.CircleView
+    <LinearLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
