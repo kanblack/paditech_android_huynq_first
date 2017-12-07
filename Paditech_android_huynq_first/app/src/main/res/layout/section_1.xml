@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+        android:layout_columnSpan="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="1"
         android:background="#e21c1c"
         android:gravity="bottom"
         >
@@ -24,13 +26,8 @@
             android:textColor="#FFFFFF"
             android:paddingLeft="15dp"/>
     </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_weight="2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
         <LinearLayout
-            android:layout_weight="1"
             android:background="#2e672d"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -56,5 +53,4 @@
                 android:textColor="#FFFFFF"
                 android:paddingLeft="15dp"/>
         </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+</GridLayout>
