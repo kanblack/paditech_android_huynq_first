@@ -1,10 +1,13 @@
 package com.pesteam.paditech_android_huynq_first;
 
+import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -25,38 +28,37 @@ public class Screen1Adapter extends RecyclerView.Adapter<Screen1Adapter.BaseView
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         BaseViewHolder holder;
-        switch (viewType)
-        {
+        switch (viewType) {
             case TYPE_SECTION_1:
             case TYPE_SECTION_2:
             case TYPE_SECTION_3:
             case TYPE_SECTION_4:
-                holder = new SectionViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.background_text_section,parent,false));
+                holder = new SectionViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.background_text_section, parent, false));
                 break;
             case TYPE_CHILD_1:
-                holder = new NewsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_1,parent,false));
+                holder = new NewsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_1, parent, false));
                 break;
             case TYPE_CHILD_2:
-                holder = new RequestInsuranceViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_2,parent,false));
+                holder = new RequestInsuranceViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_2, parent, false));
                 break;
             case TYPE_CHILD_3:
-                holder = new ResearchViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_3,parent,false));
+                holder = new ResearchViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_3, parent, false));
                 break;
             case TYPE_CHILD_4:
-                holder = new SupportViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_3,parent,false));
+                holder = new SupportViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_3, parent, false));
                 break;
             default:
-                holder = new ResearchViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_3,parent,false));
+                holder = new ResearchViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_3, parent, false));
         }
         return holder;
     }
 
     @Override
     public int getItemViewType(int position) {
-        if(position%2==0){
-            return position/2+1;
+        if (position % 2 == 0) {
+            return position / 2 + 1;
         } else {
-            return position/2 + 5;
+            return position / 2 + 5;
         }
     }
 
@@ -73,7 +75,7 @@ public class Screen1Adapter extends RecyclerView.Adapter<Screen1Adapter.BaseView
     abstract class BaseViewHolder extends RecyclerView.ViewHolder {
         BaseViewHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this,itemView);
+            ButterKnife.bind(this, itemView);
         }
 
         void bindData(int position) {
@@ -84,19 +86,39 @@ public class Screen1Adapter extends RecyclerView.Adapter<Screen1Adapter.BaseView
     }
 
     class SectionViewHolder extends BaseViewHolder {
-         SectionViewHolder(View itemView) {
+
+        @BindView(R.id.ln_text)
+        LinearLayout layout;
+
+        SectionViewHolder(View itemView) {
             super(itemView);
         }
 
+        @SuppressLint("ResourceAsColor")
         @Override
         void onBindingData(int position) {
-
+            switch (position / 2) {
+                case 0:
+                    layout.setBackgroundColor(R.color.section1);
+                    break;
+                case 1:
+                    layout.setBackgroundColor(R.color.section2);
+                    break;
+                case 2:
+                    layout.setBackgroundColor(R.color.section3);
+                    break;
+                case 3:
+                    layout.setBackgroundColor(R.color.section4);
+                    break;
+                default:
+                    layout.setBackgroundColor(R.color.section4);
+            }
         }
     }
 
     class NewsViewHolder extends BaseViewHolder {
 
-         NewsViewHolder(View itemView) {
+        NewsViewHolder(View itemView) {
             super(itemView);
         }
 
@@ -120,7 +142,7 @@ public class Screen1Adapter extends RecyclerView.Adapter<Screen1Adapter.BaseView
 
     class ResearchViewHolder extends BaseViewHolder {
 
-         ResearchViewHolder(View itemView) {
+        ResearchViewHolder(View itemView) {
             super(itemView);
         }
 
