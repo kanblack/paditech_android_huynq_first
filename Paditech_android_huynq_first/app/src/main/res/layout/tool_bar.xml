@@ -9,13 +9,15 @@
         >
     <ImageButton
         android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:src="@drawable/icon_user"/>
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:background="@drawable/icon_user"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"/>
     <ImageButton
         android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
         android:background="#4494f5"/>
     <TextView
         android:layout_weight="7"
@@ -23,18 +25,24 @@
             android:layout_height="match_parent"
         android:gravity="center"
         android:textColor="#FFFFFF"
-        android:text="dsdsds"
+        android:text="FTC CLAIM"
+        android:textSize="20sp"
             />
     <ImageButton
         android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:src="@mipmap/ic_launcher"/>
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_notifications_black_24dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"/>
     <ImageButton
         android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:src="@drawable/ic_notifications_black_24dp"/>
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_settings_black_24dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"/>
+
 
 
     </LinearLayout>
