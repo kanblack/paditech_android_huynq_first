@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-
-        android:bottom="-150dp"
-        android:top="-150dp"
+        android:bottom="-80dp"
         android:left="-210dp"
         android:right="-210dp"
-        >
+        android:top="-80dp">
         <rotate
 
             >
-            <shape
-                android:shape="oval" >
-                <solid
-                    android:color="#0022b009"
-                    />
+            <shape android:shape="oval">
+                <solid android:color="#0022b009" />
                 <stroke
                     android:width="230dp"
-                    android:color="#FFFFFF"
-                    />
+                    android:color="#FFFFFF" />
             </shape>
 
         </rotate>
