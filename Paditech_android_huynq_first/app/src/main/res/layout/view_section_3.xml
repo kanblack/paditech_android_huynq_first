@@ -6,20 +6,49 @@
     android:layout_height="250dp">
 
     <LinearLayout
-        android:src="@drawable/back_ground_text_p0_gach"
+
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:background="#931d1d"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_img_cicrle" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="#000000">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_img_cicrle" />
+    </LinearLayout>
 
     <LinearLayout
+        android:background="#000000"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_img_cicrle" />
+    </LinearLayout>
 
 </LinearLayout>

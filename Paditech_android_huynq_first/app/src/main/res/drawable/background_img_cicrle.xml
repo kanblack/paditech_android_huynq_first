@@ -2,8 +2,8 @@
 <layer-list  xmlns:android="http://schemas.android.com/apk/res/android">
     <item
 
-        android:bottom="-80dp"
-        android:top="-80dp"
+        android:bottom="-150dp"
+        android:top="-150dp"
         android:left="-210dp"
         android:right="-210dp"
         >
@@ -18,9 +18,6 @@
                 <stroke
                     android:width="230dp"
                     android:color="#FFFFFF"
-                    />
-                <gradient
-                    android:angle="270"
                     />
             </shape>
 
