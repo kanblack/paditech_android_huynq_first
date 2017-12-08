@@ -12,23 +12,22 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
-    ListView listView;
-    ArrayList<String> list_activity = new ArrayList<>();
-    Class<?>[] screens = new Class[]{
-            Screen_1.class
+    private ListView listView;
+    private ArrayList<String> list_activity = new ArrayList<>();
+    private Class<?>[] screens = new Class[]{
+            Screen1Activity.class
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
-        for(int i = 0; i<screens.length;i++){
-            Class<?> screen = screens[i];
-            list_activity.add(screen.getSimpleName());
-        }
+        initViews();
+        initData();
+        setupListView();
+    }
 
+    private void setupListView() {
         ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,list_activity);
         listView.setAdapter(listAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -36,11 +35,18 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, screens[i]);
+                startActivity(intent);
             }
         });
     }
 
-    public void init(){
+    private void initData() {
+        for (Class<?> screen : screens) {
+            list_activity.add(screen.getSimpleName());
+        }
+    }
+
+    public void initViews(){
         listView = (ListView) findViewById(R.id.list_main);
     }
 }

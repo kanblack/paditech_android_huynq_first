@@ -5,11 +5,16 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pesteam.paditech_android_huynq_first.Screen_1">
-    <ListView
+    tools:context="com.pesteam.paditech_android_huynq_first.Screen1Activity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        >
+
+    </include>
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/list_view">
-
-    </ListView>
+        android:id="@+id/rcvMain"/>
 </LinearLayout>
