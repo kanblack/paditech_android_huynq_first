@@ -19,7 +19,8 @@
         <activity
             android:name=".Screen1Activity"
             android:theme="@style/apptheme" />
-        <activity android:name=".Screen2Activity"></activity>
+        <activity android:name=".Screen2Activity"
+            android:theme="@style/apptheme"/>
     </application>
 
 </manifest>
