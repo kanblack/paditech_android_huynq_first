@@ -31,10 +31,10 @@
     </LinearLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_marginTop="15dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginBottom="50dp"
+        android:layout_marginTop="15dp"
         android:src="@drawable/background" />
 
     <EditText
@@ -63,9 +63,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@null"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="5dp"
+        android:background="@null"
         android:drawableLeft="@drawable/ic_lock_outline_white_24dp"
         android:drawablePadding="15dp"
         android:hint="password"

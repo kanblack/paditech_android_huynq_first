@@ -101,19 +101,19 @@ public class Screen1Adapter extends RecyclerView.Adapter<Screen1Adapter.BaseView
             Context context = itemView.getContext();
             switch (position / 2) {
                 case 0:
-                    layout.setBackgroundColor(context.getResources().getColor(R.color.section1));
+                    layout.setBackgroundColor(context.getResources().getColor(R.color.section1_screen1));
                     break;
                 case 1:
-                    layout.setBackgroundColor(context.getResources().getColor(R.color.section2));
+                    layout.setBackgroundColor(context.getResources().getColor(R.color.section2_screen1));
                     break;
                 case 2:
-                    layout.setBackgroundColor(context.getResources().getColor(R.color.section3));
+                    layout.setBackgroundColor(context.getResources().getColor(R.color.section3_screen1));
                     break;
                 case 3:
-                    layout.setBackgroundColor(context.getResources().getColor(R.color.section4));
+                    layout.setBackgroundColor(context.getResources().getColor(R.color.section4_screen1));
                     break;
                 default:
-                    layout.setBackgroundColor(context.getResources().getColor(R.color.section1));
+                    layout.setBackgroundColor(context.getResources().getColor(R.color.section1_screen1));
             }
         }
     }

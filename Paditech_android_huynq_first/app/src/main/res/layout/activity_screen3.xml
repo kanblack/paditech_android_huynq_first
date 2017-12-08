@@ -61,12 +61,11 @@
         </LinearLayout>
 
 
-
         <RelativeLayout
             android:id="@+id/Rl_header"
-            android:layout_below="@+id/ln_header"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ln_header">
 
             <LinearLayout
                 android:id="@+id/ln_inside_rl"
@@ -75,85 +74,89 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_weight="1"
                     android:id="@+id/ln_red"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
+                    android:layout_weight="1"
                     android:background="#da0b0b"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:inputType="number"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="#ffffff"
                         android:text="15"
-                        android:textSize="30dp"
-                        />
+                        android:textColor="#ffffff"
+                        android:textSize="30dp" />
+
                     <TextView
-                        android:inputType="text"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:inputType="text"
                         android:text="remaining task"
-                        android:textSize="10sp"/>
+                        android:textColor="#ffffff"
+                        android:textSize="10sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_toRightOf="@+id/ln_red"
+                    android:layout_weight="1"
                     android:background="#30a1e2"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:inputType="number"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="#ffffff"
                         android:text="32"
-                        android:textSize="30dp"
-                        />
+                        android:textColor="#ffffff"
+                        android:textSize="30dp" />
+
                     <TextView
-                        android:inputType="text"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:inputType="text"
                         android:text="completed tasks"
-                        android:textSize="10sp"/>
+                        android:textColor="#ffffff"
+                        android:textSize="10sp" />
 
                 </LinearLayout>
             </LinearLayout>
+
             <TextView
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
+                android:id="@+id/text_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ln_inside_rl"
-                android:text="TODAY"
-                android:id="@+id/text_time"/>
-            <android.support.v7.widget.RecyclerView
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
-                android:layout_below="@+id/text_time"
+                android:layout_marginTop="15dp"
+                android:text="TODAY" />
+
+            <android.support.v7.widget.RecyclerView
                 android:id="@+id/rcvScreen3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_time"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp" />
         </RelativeLayout>
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/icon_add"
-            android:layout_centerInParent="true"
             android:layout_alignTop="@+id/Rl_header"
-            android:layout_marginTop="-25dp" />
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-25dp"
+            android:src="@drawable/icon_add" />
 
     </RelativeLayout>
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#4494f5"
+    android:elevation="4dp"
+    android:orientation="horizontal"
+    android:theme="@style/Base.ThemeOverlay.AppCompat.Dark">
+    <ImageButton
+        android:id="@+id/img_camera"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_camera_alt_white_24dp"/>
+    <EditText
+        android:layout_toRightOf="@+id/img_camera"
+        android:layout_toLeftOf="@+id/img_mess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/ic_search_white_24dp"
+        />
+    <ImageButton
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/img_mess"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/icon_mess"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

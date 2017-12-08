@@ -6,8 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.github.pavlospt.CircleView;
+
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,6 +19,12 @@ import butterknife.ButterKnife;
 
 public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseViewHolder> {
 
+    private int[] color = new int[]{
+            R.color.cicrle1_mini_screen3,
+            R.color.cicrle2_mini_screen3,
+            R.color.cicrle3_mini_screen3,
+            R.color.cicrle4_mini_screen3,
+    };
     private ArrayList<String> listWork = new ArrayList<>();
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -63,6 +70,8 @@ public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseView
 
         @BindView(R.id.text_inview_inrecycleview)
         TextView tV;
+        @BindView(R.id.cicrleview)
+        CircleView ccv;
 
         public ViewChild(View itemView) {
             super(itemView);
@@ -71,6 +80,10 @@ public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseView
         @Override
         void onBinding(int position) {
             tV.setText(listWork.get(position));
+
+            ccv.setBackgroundColor(itemView.getContext().getResources().getColor(color[position%4]));
+            ccv.setFillColor(itemView.getContext().getResources().getColor(color[position%4]));
+            ccv.setStrokeColor(itemView.getContext().getResources().getColor(color[position%4]));
         }
     }
 }
