@@ -4,6 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.pesteam.paditech_android_huynq_first.Screen3Activity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ln_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e95252"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/ic_menu_white_24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bangindong"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UI/UX Designer"
+                        android:textColor="#39d4ff"
+                        android:textStyle="" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/Rl_header"
+            android:layout_below="@+id/ln_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:id="@+id/ln_red"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:background="#da0b0b"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:inputType="number"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:text="15"
+                        android:textSize="30dp"
+                        />
+                    <TextView
+                        android:inputType="text"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:text="remaining task"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/ln_red"
+                    android:background="#30a1e2"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:inputType="number"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:text="32"
+                        android:textSize="30dp"
+                        />
+                    <TextView
+                        android:inputType="text"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:text="completed tasks"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_add"
+            android:layout_centerInParent="true"
+            android:layout_alignTop="@+id/Rl_header"
+            android:layout_marginTop="-25dp" />
+    </RelativeLayout>
 </LinearLayout>
