@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Screen1Activity"
+        <activity
+            android:name=".Screen1Activity"
+            android:theme="@style/apptheme" />
+        <activity android:name=".Screen2Activity"
             android:theme="@style/apptheme"/>
     </application>
 
