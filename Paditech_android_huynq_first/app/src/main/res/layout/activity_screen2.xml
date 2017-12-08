@@ -4,67 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.pesteam.paditech_android_huynq_first.Screen2Activity"
+    android:background="@drawable/background"
     android:gravity="center"
-    android:background="@drawable/background">
+    android:orientation="vertical"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    tools:context="com.pesteam.paditech_android_huynq_first.Screen2Activity">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome, "
-        android:textColor="#ffffff"
-        android:textSize="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, "
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome"
-            android:textColor="#2f86f7"
-            android:textSize="30dp"/>
+            android:textColor="#39d4ff"
+            android:textSize="30dp" />
     </LinearLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="15dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/background"/>
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/background" />
 
     <EditText
-        android:drawablePadding="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
         android:drawableLeft="@drawable/icon_user"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="dsdsdssss"/>
-    <EditText
         android:drawablePadding="15dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:drawableLeft="@drawable/ic_lock_outline_white_24dp"
+        android:ems="10"
+        android:hint="username"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <View
+        android:id="@+id/UnderLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="2dp"
+        android:background="#e2a6a6a6" />
+
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="dsdsdssss"/>
+        android:background="@null"
+        android:drawableLeft="@drawable/ic_lock_outline_white_24dp"
+        android:drawablePadding="15dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <View
+        android:id="@+id/UnderLine2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="2dp"
+        android:background="#e2a6a6a6" />
 
     <Button
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
+        android:layout_marginTop="10dp"
+        android:background="#39d4ff"
         android:padding="20dp"
-        android:textSize="20dp"
+        android:text="LOGIN"
         android:textColor="#FFFFFF"
-        android:background="#39d4ff"/>
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CREAT NEW ACCOUNT"
+        android:layout_marginTop="25dp"
         android:gravity="center"
-        android:textSize="13dp"
-        android:layout_marginTop="15dp"
-        android:textColor="#FFFFFF"/>
+        android:text="CREAT NEW ACCOUNT"
+        android:textColor="#FFFFFF"
+        android:textSize="13dp" />
 </LinearLayout>
