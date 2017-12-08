@@ -40,6 +40,10 @@ public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseView
         listWork = list;
     }
 
+    public void addData(String data){
+        listWork.add(data);
+    }
+
     abstract class BaseViewHolder extends RecyclerView.ViewHolder{
 
 
