@@ -24,9 +24,9 @@ import static com.pesteam.paditech_android_huynq_first.Screen4ChildAdapterClass.
 
 public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdapter>{
 
-    static final int TYPE_SECTION_1 = 0;
-    static final int TYPE_SECTION_2 = 1;
-    static final int TYPE_CHILD = 2;
+    private static final int TYPE_SECTION_1 = 0;
+    private static final int TYPE_SECTION_2 = 1;
+    private static final int TYPE_CHILD = 2;
     private ArrayList<Screen4ChildAdapterClass> list_childen = new ArrayList<>();
     private int[] list_statuses = new int[]{
             R.drawable.icon_facebook_wow,
@@ -134,15 +134,15 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
             } else if(position_first>(getNumberNewNoti()+1)){
                 position = position_first - 2;
             }
-            switch (list_childen.get(position).getAction_click()){
-                case TYPE_UNCLICK:
+            if (list_childen.get(position).getAction_click() == TYPE_UNCLICK){
                     layout_background_noti.setBackgroundColor(itemView.getResources().getColor(R.color.back_ground_clicked_screen4));
-                    break;
-                case TYPE_CLICK:
-                    break;
-                default:
-
             }
+            tv_noti.setText(Html.fromHtml(getText(position)+list_childen.get(position).getText()));
+            im_icon_noti.setImageResource(list_statuses[list_childen.get(position).getStatus()]);
+            tv_time_noti.setText(list_childen.get(position).getTime());
+        }
+
+        private String getText(int position){
             String[] list_people = list_childen.get(position).getList_people();
             String str = "";
             if(list_people.length>2){
@@ -154,9 +154,7 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
                 str = "<b>"+list_people[0]+", "+list_people[1]
                         +"</b>"+ " ";
             }
-            tv_noti.setText(Html.fromHtml(str+list_childen.get(position).getText()));
-            im_icon_noti.setImageResource(list_statuses[list_childen.get(position).getStatus()]);
-            tv_time_noti.setText(list_childen.get(position).getTime());
+            return str;
         }
     }
 }
