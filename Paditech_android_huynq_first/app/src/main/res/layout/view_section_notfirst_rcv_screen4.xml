@@ -6,15 +6,15 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#a9a5a5"/>
+        android:background="#DADBDF"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:background="#d1d1d1"/>
+        android:background="#E9EBEE"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#a9a5a5"/>
+        android:background="#DADBDF"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,11 +22,11 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="13dp"
         android:text="Earlier"
-        android:textColor="#393939"
+        android:textColor="#3E4149"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#a9a5a5"/></LinearLayout>
+        android:background="#DADBDF"/></LinearLayout>
