@@ -69,7 +69,7 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
 
     @Override
     public int getItemCount() {
-        return list_childen.size();
+        return (list_childen.size()+2);
     }
 
     abstract class BaseAdapter extends RecyclerView.ViewHolder{
@@ -129,9 +129,9 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
         @Override
         void onBindingData(int position_first) {
             int position = 0;
-            if(position_first>0&&position_first<(getNumberNewNoti()+2)){
+            if(position_first>0&&position_first<(getNumberNewNoti()+1)){
                 position = position_first - 1;
-            } else if(position_first>(getNumberNewNoti()+2)){
+            } else if(position_first>(getNumberNewNoti()+1)){
                 position = position_first - 2;
             }
             switch (list_childen.get(position).getAction_click()){

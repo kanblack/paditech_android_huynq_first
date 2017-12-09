@@ -3,32 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="55dp"
     android:background="#23599b"
-    android:elevation="4dp"
     android:orientation="horizontal"
     android:theme="@style/Base.ThemeOverlay.AppCompat.Dark">
     <ImageButton
         android:id="@+id/img_camera"
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:background="@drawable/ic_camera_alt_white_24dp"/>
     <EditText
-        android:hint="Search "
+        android:id="@+id/ed_search"
+        android:background="@null"
+        android:hint="@string/search"
         android:layout_toRightOf="@+id/img_camera"
         android:layout_toLeftOf="@+id/img_mess"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:drawableLeft="@drawable/ic_search_white_24dp"
-        />
+        android:layout_toEndOf="@+id/img_camera"
+        android:layout_toStartOf="@+id/img_mess"
+        android:drawableStart="@drawable/ic_search_white_24dp" />
+    <View
+        android:background="#b9c7c7c7"
+        android:layout_toRightOf="@+id/img_camera"
+        android:layout_toLeftOf="@+id/img_mess"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ed_search"
+        android:layout_toEndOf="@+id/img_camera"
+        android:layout_toStartOf="@+id/img_mess"/>
     <ImageButton
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="5dp"
         android:id="@+id/img_mess"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_centerVertical="true"
         android:background="@drawable/icon_mess"
         android:layout_alignParentRight="true"/>

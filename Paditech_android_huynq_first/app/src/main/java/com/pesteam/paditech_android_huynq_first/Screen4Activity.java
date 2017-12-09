@@ -19,7 +19,7 @@ import static com.pesteam.paditech_android_huynq_first.Screen4ChildAdapterClass.
 
 public class Screen4Activity extends AppCompatActivity {
 
-    Screen4Adapter Adapter = new Screen4Adapter();;
+    Screen4Adapter Adapter = new Screen4Adapter();
     @BindView(R.id.rcv_new_Screen4)
     RecyclerView rcv_new;
 
@@ -29,7 +29,6 @@ public class Screen4Activity extends AppCompatActivity {
         setContentView(R.layout.activity_screen4);
         ButterKnife.bind(this);
         addNewAdapter();
-        addEarlierAdapter();
         rcv_new.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         rcv_new.setAdapter(Adapter);
     }
@@ -67,9 +66,5 @@ public class Screen4Activity extends AppCompatActivity {
                 "like your comment:\" aihihi \"",
                 STATUS_LIKE,TYPE_CLICK,
                 "3 hours ago"));
-    }
-
-    private void addEarlierAdapter(){
-
     }
 }
