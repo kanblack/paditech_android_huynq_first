@@ -8,8 +8,8 @@
     <ImageButton
         android:id="@+id/img_camera"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@drawable/ic_camera_alt_white_24dp"/>
@@ -36,8 +36,8 @@
         android:layout_toEndOf="@+id/img_camera"
         android:layout_toStartOf="@+id/img_mess"/>
     <ImageButton
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/img_mess"
         android:layout_width="25dp"
         android:layout_height="25dp"
