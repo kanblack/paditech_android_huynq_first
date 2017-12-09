@@ -47,7 +47,7 @@ public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseView
         listWork = list;
     }
 
-    public void addData(String data){
+    void addData(String data){
         listWork.add(data);
     }
 
@@ -73,7 +73,7 @@ public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseView
         @BindView(R.id.cicrleview)
         CircleView ccv;
 
-        public ViewChild(View itemView) {
+        ViewChild(View itemView) {
             super(itemView);
         }
 

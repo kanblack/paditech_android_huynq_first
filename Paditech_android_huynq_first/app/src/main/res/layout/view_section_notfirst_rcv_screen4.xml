@@ -2,7 +2,7 @@
 <LinearLayout
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -10,11 +10,23 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:background="#b9b9b9"/>
+        android:background="#d1d1d1"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#a9a5a5"/>
-    <include
-        layout="@layout/view_section_fist_rcv_screen4"/>
-</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="13dp"
+        android:text="Earlier"
+        android:textColor="#393939"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#a9a5a5"/></LinearLayout>

@@ -3,7 +3,8 @@
     android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/background_noti">
+    android:id="@+id/background_noti"
+    >
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/avar_noti"
         android:layout_weight="1"
@@ -13,11 +14,12 @@
         android:layout_margin="10dp"
         />
     <RelativeLayout
+        android:layout_marginBottom="10dp"
         android:layout_weight="4"
-        android:layout_gravity="center"
-        android:gravity="center"
+        android:layout_gravity="top"
+        android:gravity="top"
         android:layout_width="0dip"
-        android:layout_height="80dp">
+        android:layout_height="wrap_content">
         <TextView
             android:text="sađsadáddddddddddddddddddddddd"
             android:id="@+id/text_noti_rcv_screen4"
@@ -25,13 +27,14 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"/>
         <LinearLayout
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="20dp"
             android:text="dsdsds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_noti_rcv_screen4"
             >
             <ImageView
+                android:id="@+id/icon_noti"
                 android:layout_gravity="bottom"
                 android:src="@drawable/icon_facebook_comment"
                 android:layout_width="15dp"
@@ -40,6 +43,7 @@
             <TextView
                 android:gravity="center_vertical"
                 android:text="dsdsdssdsds"
+                android:id="@+id/time_noti"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>

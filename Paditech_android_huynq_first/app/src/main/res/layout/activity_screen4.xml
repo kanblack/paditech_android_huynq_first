@@ -10,7 +10,8 @@
         layout="@layout/tool_bar_screen4"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rcvScreen4"
+        android:id="@+id/rcv_new_Screen4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>
