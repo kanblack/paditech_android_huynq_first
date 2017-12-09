@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
+    android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</android.support.constraint.ConstraintLayout>
+    android:layout_height="wrap_content"
+    android:id="@+id/background_noti">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avar_noti"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:src="@drawable/background"
+        android:layout_margin="10dp"
+        />
+    <RelativeLayout
+        android:layout_weight="4"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="0dip"
+        android:layout_height="80dp">
+        <TextView
+            android:text="sađsadáddddddddddddddddddddddd"
+            android:id="@+id/text_noti_rcv_screen4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:text="dsdsds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_noti_rcv_screen4"
+            >
+            <ImageView
+                android:layout_gravity="bottom"
+                android:src="@drawable/icon_facebook_comment"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="3dp"/>
+            <TextView
+                android:gravity="center_vertical"
+                android:text="dsdsdssdsds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more_horiz_grey_24dp"/>
+</LinearLayout>
