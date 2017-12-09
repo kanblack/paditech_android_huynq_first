@@ -3,8 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="section1">#45C465</color>
-    <color name="section2">#3F51B5</color>
-    <color name="section3">#f42206</color>
-    <color name="section4">#ece802</color>
+    <color name="section1_screen1">#45C465</color>
+    <color name="section2_screen1">#3F51B5</color>
+    <color name="section3_screen1">#f42206</color>
+    <color name="section4_screen1">#ece802</color>
+    <color name="cicrle1_mini_screen3">#bc2ba6</color>
+    <color name="cicrle2_mini_screen3">#45C465</color>
+    <color name="cicrle3_mini_screen3">#2ea8d9</color>
+    <color name="cicrle4_mini_screen3">#c2a33d</color>
+    <color name="back_ground_clicked_screen4">#EEF4FF</color>
 </resources>

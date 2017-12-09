@@ -34,22 +34,22 @@ public class Screen1Adapter extends RecyclerView.Adapter<Screen1Adapter.BaseView
             case TYPE_SECTION_2:
             case TYPE_SECTION_3:
             case TYPE_SECTION_4:
-                holder = new SectionViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.background_text_section, parent, false));
+                holder = new SectionViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_rcv_screen1, parent, false));
                 break;
             case TYPE_CHILD_1:
-                holder = new NewsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_1, parent, false));
+                holder = new NewsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child1_rcv_screen1, parent, false));
                 break;
             case TYPE_CHILD_2:
-                holder = new RequestInsuranceViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_2, parent, false));
+                holder = new RequestInsuranceViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child2_rcv_screen1, parent, false));
                 break;
             case TYPE_CHILD_3:
-                holder = new ResearchViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_3, parent, false));
+                holder = new ResearchViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child3_rcv_screen1, parent, false));
                 break;
             case TYPE_CHILD_4:
-                holder = new SupportViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_3, parent, false));
+                holder = new SupportViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child3_rcv_screen1, parent, false));
                 break;
             default:
-                holder = new ResearchViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_3, parent, false));
+                holder = new ResearchViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child3_rcv_screen1, parent, false));
         }
         return holder;
     }
@@ -101,19 +101,19 @@ public class Screen1Adapter extends RecyclerView.Adapter<Screen1Adapter.BaseView
             Context context = itemView.getContext();
             switch (position / 2) {
                 case 0:
-                    layout.setBackgroundColor(context.getResources().getColor(R.color.section1));
+                    layout.setBackgroundColor(context.getResources().getColor(R.color.section1_screen1));
                     break;
                 case 1:
-                    layout.setBackgroundColor(context.getResources().getColor(R.color.section2));
+                    layout.setBackgroundColor(context.getResources().getColor(R.color.section2_screen1));
                     break;
                 case 2:
-                    layout.setBackgroundColor(context.getResources().getColor(R.color.section3));
+                    layout.setBackgroundColor(context.getResources().getColor(R.color.section3_screen1));
                     break;
                 case 3:
-                    layout.setBackgroundColor(context.getResources().getColor(R.color.section4));
+                    layout.setBackgroundColor(context.getResources().getColor(R.color.section4_screen1));
                     break;
                 default:
-                    layout.setBackgroundColor(context.getResources().getColor(R.color.section1));
+                    layout.setBackgroundColor(context.getResources().getColor(R.color.section1_screen1));
             }
         }
     }

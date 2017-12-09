@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <com.github.pavlospt.CircleView
+        android:id="@+id/cicrleview"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:cv_backgroundColorValue="@color/colorPrimary"
+        app:cv_fillColor="@color/colorPrimary"
+        app:cv_strokeColorValue="@color/colorPrimary"
+        app:cv_titleText=""
+        app:cv_subtitleText=""
+        />
+        <View
+            android:layout_below="@+id/cicrleview"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="#9e9e9e"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/text_inview_inrecycleview"
+        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="sđsdsdsd"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  v"
+        android:textStyle="bold"
+        android:gravity="top"/>
+</LinearLayout>

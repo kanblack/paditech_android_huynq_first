@@ -16,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> list_activity = new ArrayList<>();
     private Class<?>[] screens = new Class[]{
             Screen1Activity.class,
-            Screen2Activity.class
+            Screen2Activity.class,
+            Screen3Activity.class,
+            Screen4Activity.class
     };
 
     @Override
