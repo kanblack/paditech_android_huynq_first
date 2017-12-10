@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.pesteam.paditech_android_huynq_first.Screen4ChildAdapterClass.TYPE_CLICK;
 import static com.pesteam.paditech_android_huynq_first.Screen4ChildAdapterClass.TYPE_NOT_WATCH;
 import static com.pesteam.paditech_android_huynq_first.Screen4ChildAdapterClass.TYPE_UNCLICK;
 
@@ -23,10 +24,9 @@ import static com.pesteam.paditech_android_huynq_first.Screen4ChildAdapterClass.
 
 public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdapter>{
 
-    private static final int TYPE_SECTION_FIRST = 0;
+    private static final int TYPE_SECTION_1 = 0;
     private static final int TYPE_SECTION_2 = 1;
-    private static final int TYPE_SECTION_LAST = 2;
-    private static final int TYPE_CHILD = 3;
+    private static final int TYPE_CHILD = 2;
     private ArrayList<Screen4ChildAdapterClass> list_childen = new ArrayList<>();
     private int[] list_statuses = new int[]{
             R.drawable.icon_facebook_wow,
@@ -38,14 +38,12 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
     @Override
     public BaseAdapter onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType){
-            case TYPE_SECTION_FIRST:
+            case TYPE_SECTION_1:
                 return new SectionAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_fist_rcv_screen4,parent,false));
             case TYPE_SECTION_2:
                 return new SectionAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_notfirst_rcv_screen4,parent,false));
             case TYPE_CHILD:
                 return new ChildAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_rcv_screen4,parent,false));
-            case TYPE_SECTION_LAST:
-                return new SectionAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_last_rcv_screen4,parent,false));
             default:
                 return new ChildAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_rcv_screen4,parent,false));
         }
@@ -56,11 +54,9 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
     public int getItemViewType(int position) {
         int numberNewNoti = getNumberNewNoti();
         if(position == 0){
-            return TYPE_SECTION_FIRST;
-        } else if(position==(numberNewNoti+1)) {
+            return TYPE_SECTION_1;
+        } else if(position==(numberNewNoti+1)){
             return TYPE_SECTION_2;
-        }else if(position==(list_childen.size()+2)){
-            return TYPE_SECTION_LAST;
         } else {
             return TYPE_CHILD;
         }
@@ -73,7 +69,7 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
 
     @Override
     public int getItemCount() {
-        return (list_childen.size()+3);
+        return (list_childen.size()+2);
     }
 
     abstract class BaseAdapter extends RecyclerView.ViewHolder{
