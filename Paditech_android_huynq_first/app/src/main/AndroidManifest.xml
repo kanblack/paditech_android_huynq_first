@@ -28,6 +28,7 @@
         <activity
             android:name=".Screen4Activity"
             android:theme="@style/apptheme" />
+        <activity android:name=".Screen5Activity"></activity>
     </application>
 
 </manifest>
