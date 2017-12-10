@@ -21,6 +21,25 @@
         android:id="@+id/rcv_vertical_screen5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/tool_bar_bottom_screen5"
+        android:layout_alignParentRight="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:background="@drawable/over_blue1"
+        android:gravity="center">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:paddingTop="3dp"
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_speaker_notes_white_24dp"
+        android:background="@drawable/over_blue1"
+        />
+    </LinearLayout>
     <include
         android:id="@+id/tool_bar_bottom_screen5"
         android:layout_alignParentBottom="true"
