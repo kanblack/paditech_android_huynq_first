@@ -9,7 +9,7 @@
         android:layout_width="65dp"
         android:layout_height="65dp" />
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/icon_active"
+        android:id="@+id/icon_active_rcv_vertical_screen5"
         android:background="@drawable/over_green"
         android:layout_width="20dp"
         android:layout_height="20dp"
@@ -30,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
+        android:id="@+id/tv_content_rcv_vertical_screen5"
         android:textColor="#9B9B9B"
         android:layout_toLeftOf="@+id/img_small_child_rcv_vertical_screen5"
         android:layout_marginLeft="10dp"

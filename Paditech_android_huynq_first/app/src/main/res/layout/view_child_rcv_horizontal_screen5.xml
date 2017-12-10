@@ -6,12 +6,13 @@
     android:background="#FAFAFA"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
-        android:id="@+id/big_img_rcv_horizonal_screen5"
+        android:id="@+id/ln_big_img_rcv_horizontal_screen5"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:gravity="center"
         android:background="@drawable/over_blue">
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/big_img_rcv_horizontal_screen5"
         android:layout_gravity="center"
         android:background="@drawable/over_blue"
         android:layout_width="60dp"
@@ -23,6 +24,7 @@
     </de.hdodenhof.circleimageview.CircleImageView>
     </LinearLayout>
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/small_img_rcv_horizontal_screen5"
         android:layout_marginBottom="-4dp"
         app:civ_border_width="2dp"
         app:civ_border_color="#ffffff"
@@ -31,15 +33,15 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/background"
-        android:layout_alignBottom="@+id/big_img_rcv_horizonal_screen5"/>
+        android:layout_alignBottom="@+id/ln_big_img_rcv_horizontal_screen5"/>
     <LinearLayout
         android:gravity="center"
         android:layout_marginTop="5dp"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/big_img_rcv_horizonal_screen5">
+        android:layout_below="@+id/ln_big_img_rcv_horizontal_screen5">
         <com.github.pavlospt.CircleView
-            android:id="@+id/icon_onl_or_not_screen5"
+            android:id="@+id/icon_onl_or_not_rcv_horizontal_screen5"
             app:cv_titleText=""
             app:cv_subtitleText=""
             app:cv_backgroundColorValue="#4BCC1F"
@@ -49,6 +51,7 @@
             android:layout_height="10dp"
             android:layout_gravity="center"/>
     <TextView
+        android:id="@+id/tv_name_rcv_horizontal_screen5"
         android:paddingLeft="3dp"
         android:gravity="center"
         android:text="Nguyên"

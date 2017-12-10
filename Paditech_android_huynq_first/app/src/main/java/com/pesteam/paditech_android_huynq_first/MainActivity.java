@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
             Screen1Activity.class,
             Screen2Activity.class,
             Screen3Activity.class,
-            Screen4Activity.class
+            Screen4Activity.class,
+            Screen5Activity.class
     };
 
     @Override
