@@ -2,19 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.pesteam.paditech_android_huynq_first.Screen1Activity">
 
     <include
         android:id="@+id/tool_bar"
-        layout="@layout/tool_bar_screen1"
-        >
+        layout="@layout/tool_bar_screen1">
 
     </include>
+
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcvMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/rcvMain"/>
+        android:layout_height="match_parent" />
 </LinearLayout>
