@@ -72,7 +72,8 @@ public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseView
         TextView tV;
         @BindView(R.id.cicrleview)
         CircleView ccv;
-
+        @BindView(R.id.view_line_last_screen3)
+                View view;
         ViewChild(View itemView) {
             super(itemView);
         }
@@ -80,6 +81,9 @@ public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseView
         @Override
         void onBinding(int position) {
             tV.setText(listWork.get(position));
+            if(position == (listWork.size()-1)){
+                view.setVisibility(View.GONE);
+            }
 
             ccv.setBackgroundColor(itemView.getContext().getResources().getColor(color[position%4]));
             ccv.setFillColor(itemView.getContext().getResources().getColor(color[position%4]));

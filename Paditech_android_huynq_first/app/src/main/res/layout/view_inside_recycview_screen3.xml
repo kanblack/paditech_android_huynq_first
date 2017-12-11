@@ -21,6 +21,7 @@
         app:cv_subtitleText=""
         />
         <View
+            android:id="@+id/view_line_last_screen3"
             android:layout_below="@+id/cicrleview"
             android:layout_width="1dp"
             android:layout_height="30dp"

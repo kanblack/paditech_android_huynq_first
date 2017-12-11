@@ -16,7 +16,7 @@
                         android:color="#0022b009"
                         />
                     <corners
-                        android:radius="30dp"
+                        android:radius="20dp"
                         />
                     <stroke
                         android:width="20dp"
