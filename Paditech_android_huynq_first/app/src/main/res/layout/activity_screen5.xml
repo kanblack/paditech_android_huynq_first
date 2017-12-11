@@ -31,12 +31,12 @@
         android:orientation="vertical"
         android:background="@drawable/over_blue1"
         android:gravity="center">
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:paddingTop="3dp"
         android:layout_gravity="center"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_speaker_notes_white_24dp"
+        android:src="@drawable/ic_chat_white_24dp"
         android:background="@drawable/over_blue1"
         />
     </LinearLayout>
