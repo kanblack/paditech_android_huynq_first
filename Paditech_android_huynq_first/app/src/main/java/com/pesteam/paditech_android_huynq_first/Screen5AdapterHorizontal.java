@@ -54,6 +54,7 @@ public class Screen5AdapterHorizontal extends RecyclerView.Adapter<Screen5Adapte
         return list_child.size()+1;
     }
 
+    //todo: rename class to holder
     abstract class BaseAdapter extends RecyclerView.ViewHolder{
 
         BaseAdapter(View itemView) {
@@ -72,6 +73,7 @@ public class Screen5AdapterHorizontal extends RecyclerView.Adapter<Screen5Adapte
         list_child.add(horizontal);
     }
 
+    //TODO: rename class
     class childNotFirstAdapter extends BaseAdapter{
 
         @BindView(R.id.big_img_rcv_horizontal_screen5)
@@ -97,6 +99,7 @@ public class Screen5AdapterHorizontal extends RecyclerView.Adapter<Screen5Adapte
         }
     }
 
+    //TODO: rename class
     class childFirstAdapter extends BaseAdapter{
 
         childFirstAdapter(View itemView) {
