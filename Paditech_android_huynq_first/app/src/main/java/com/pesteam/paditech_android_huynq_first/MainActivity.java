@@ -12,8 +12,8 @@ import android.widget.ListView;
 
 import com.pesteam.paditech_android_huynq_first.retrofit.APIService;
 import com.pesteam.paditech_android_huynq_first.retrofit.APIUtils;
-import com.pesteam.paditech_android_huynq_first.retrofit.Data;
-import com.pesteam.paditech_android_huynq_first.retrofit.Post;
+import com.pesteam.paditech_android_huynq_first.retrofit.DataPost;
+import com.pesteam.paditech_android_huynq_first.retrofit.GetDataScreen1.DataGet;
 
 import java.util.ArrayList;
 
@@ -23,7 +23,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String atoken;
+
     private ListView listView;
     private ArrayList<String> list_activity = new ArrayList<>();
     private Class<?>[] screens = new Class[]{
@@ -33,40 +33,16 @@ public class MainActivity extends AppCompatActivity {
             Screen4Activity.class,
             Screen5Activity.class
     };
-    private APIService mApiService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        testRetrofit();
         initViews();
         initData();
         setupListView();
     }
 
-    private void testRetrofit() {
-        mApiService = APIUtils.getAPIService();
-    }
-
-    private void sendPost(Integer userID, String token) {
-        mApiService.saveData().enqueue(new Callback<Data>() {
-            @Override
-            public void onResponse(Call<Data> call, Response<Data> response) {
-                if(response.isSuccessful()){
-                    atoken = response.body().getPost().getAccessToken();
-                Log.e("onResponse: ", atoken );}
-                else {
-                    Log.e( "onResponse: ", "unsucess");
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Data> call, Throwable t) {
-                Log.e("onreSponse", t.toString());
-            }
-        });
-    }
 
     private void setupListView() {
         ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list_activity);
@@ -74,16 +50,10 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0) {
-                    sendPost(1, "");
                     Intent intent = new Intent();
                     intent.setClass(MainActivity.this, screens[i]);
                     startActivity(intent);
-                } else {
-                    Intent intent = new Intent();
-                    intent.setClass(MainActivity.this, screens[i]);
-                    startActivity(intent);
-                }
+
             }
         });
     }
