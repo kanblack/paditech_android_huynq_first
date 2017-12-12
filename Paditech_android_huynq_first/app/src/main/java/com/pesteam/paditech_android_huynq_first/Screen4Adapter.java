@@ -21,7 +21,7 @@ import static com.pesteam.paditech_android_huynq_first.Screen4ChildAdapterClass.
  * Created by bangindong on 12/8/2017.
  */
 
-public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdapter>{
+public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseHolder>{
 
     private static final int TYPE_SECTION_FIRST = 0;
     private static final int TYPE_SECTION_2 = 1;
@@ -36,18 +36,18 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
     };
 
     @Override
-    public BaseAdapter onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType){
             case TYPE_SECTION_FIRST:
-                return new SectionAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_fist_rcv_screen4,parent,false));
+                return new SectionHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_fist_rcv_screen4,parent,false));
             case TYPE_SECTION_2:
-                return new SectionAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_notfirst_rcv_screen4,parent,false));
+                return new SectionHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_notfirst_rcv_screen4,parent,false));
             case TYPE_CHILD:
-                return new ChildAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_rcv_screen4,parent,false));
+                return new ChildHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_rcv_screen4,parent,false));
             case TYPE_SECTION_LAST:
-                return new SectionAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_last_rcv_screen4,parent,false));
+                return new SectionHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_last_rcv_screen4,parent,false));
             default:
-                return new ChildAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_rcv_screen4,parent,false));
+                return new ChildHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_rcv_screen4,parent,false));
         }
 
     }
@@ -67,7 +67,7 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
     }
 
     @Override
-    public void onBindViewHolder(BaseAdapter holder, int position) {
+    public void onBindViewHolder(BaseHolder holder, int position) {
         holder.BindData(position);
     }
 
@@ -76,9 +76,9 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
         return (list_childen.size()+3);
     }
 
-    abstract class BaseAdapter extends RecyclerView.ViewHolder{
+    abstract class BaseHolder extends RecyclerView.ViewHolder{
 
-        BaseAdapter(View itemView) {
+        BaseHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
         }
@@ -104,9 +104,9 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
        return  numberNewNoti;
     }
 
-    class SectionAdapter extends BaseAdapter{
+    class SectionHolder extends BaseHolder {
 
-        SectionAdapter(View itemView) {
+        SectionHolder(View itemView) {
             super(itemView);
         }
 
@@ -115,7 +115,7 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
 
         }
     }
-    class ChildAdapter extends BaseAdapter{
+    class ChildHolder extends BaseHolder {
 
         @BindView(R.id.background_noti)
         LinearLayout layout_background_noti;
@@ -126,7 +126,7 @@ public class Screen4Adapter extends RecyclerView.Adapter<Screen4Adapter.BaseAdap
         @BindView(R.id.time_noti)
         TextView tv_time_noti;
 
-        ChildAdapter(View itemView) {
+        ChildHolder(View itemView) {
             super(itemView);
         }
 

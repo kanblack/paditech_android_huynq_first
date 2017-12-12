@@ -18,7 +18,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by bangindong on 12/11/2017.
  */
 
-public class Screen5AdapterVertical extends RecyclerView.Adapter<Screen5AdapterVertical.BaseAdapter> {
+public class Screen5AdapterVertical extends RecyclerView.Adapter<Screen5AdapterVertical.BaseHolder> {
 
     public static final int STATUS_ON = 1;
     public static final int STATUS_OFF = 0;
@@ -32,11 +32,11 @@ public class Screen5AdapterVertical extends RecyclerView.Adapter<Screen5AdapterV
 
     private ArrayList<Screen5ChildAdapterVerticalClass> list_child = new ArrayList<>();
     @Override
-    public BaseAdapter onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if(viewType == list_child.size()+1){
-            return new lastAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_last_rcv_screen4, parent, false));
+            return new lastHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_section_last_rcv_screen4, parent, false));
         } else {
-            return new childAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_rcv_vertical_screen5, parent, false));
+            return new childHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_rcv_vertical_screen5, parent, false));
         }
     }
 
@@ -48,7 +48,7 @@ public class Screen5AdapterVertical extends RecyclerView.Adapter<Screen5AdapterV
     }
 
     @Override
-    public void onBindViewHolder(BaseAdapter holder, int position) {
+    public void onBindViewHolder(BaseHolder holder, int position) {
             holder.bind(position);
     }
 
@@ -57,9 +57,9 @@ public class Screen5AdapterVertical extends RecyclerView.Adapter<Screen5AdapterV
         return list_child.size()+1;
     }
 
-    abstract class BaseAdapter extends RecyclerView.ViewHolder{
+    abstract class BaseHolder extends RecyclerView.ViewHolder{
 
-        BaseAdapter(View itemView) {
+        BaseHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
         }
@@ -75,7 +75,7 @@ public class Screen5AdapterVertical extends RecyclerView.Adapter<Screen5AdapterV
         list_child.add(vertical);
     }
 
-    class childAdapter extends BaseAdapter{
+    class childHolder extends BaseHolder {
         @BindView(R.id.icon_active_rcv_vertical_screen5)
         CircleImageView icon_active;
         @BindView(R.id.img_big_child_rcv_vertical_screen5)
@@ -89,7 +89,7 @@ public class Screen5AdapterVertical extends RecyclerView.Adapter<Screen5AdapterV
         @BindView(R.id.tv_time_child_rcv_vertical_screen5)
         TextView tv_time;
 
-        childAdapter(View itemView) {
+        childHolder(View itemView) {
             super(itemView);
         }
 
@@ -131,9 +131,9 @@ public class Screen5AdapterVertical extends RecyclerView.Adapter<Screen5AdapterV
         }
     }
 
-    class lastAdapter extends BaseAdapter {
+    class lastHolder extends BaseHolder {
 
-        lastAdapter(View itemView) {
+        lastHolder(View itemView) {
             super(itemView);
         }
 

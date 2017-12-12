@@ -18,7 +18,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by bangindong on 12/11/2017.
  */
 
-public class Screen5AdapterHorizontal extends RecyclerView.Adapter<Screen5AdapterHorizontal.BaseAdapter> {
+public class Screen5AdapterHorizontal extends RecyclerView.Adapter<Screen5AdapterHorizontal.BaseHolder> {
 
     public static final int STATUS_ONL = 1;
     public static final int STATUS_OFF = 0;
@@ -26,16 +26,16 @@ public class Screen5AdapterHorizontal extends RecyclerView.Adapter<Screen5Adapte
 
     private ArrayList<Screen5ChildAdapterHorizontalClass> list_child = new ArrayList<>();
     @Override
-    public BaseAdapter onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if(viewType==CHILD_FIRST){
-            return new childFirstAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_first_rcv_horizontal_screen5,parent,false));
+            return new childFirstHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_first_rcv_horizontal_screen5,parent,false));
         } else {
-            return new childNotFirstAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_rcv_horizontal_screen5,parent,false));
+            return new childNotFirstHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_child_rcv_horizontal_screen5,parent,false));
         }
     }
 
     @Override
-    public void onBindViewHolder(BaseAdapter holder, int position) {
+    public void onBindViewHolder(BaseHolder holder, int position) {
         holder.bindData(position);
     }
 
@@ -55,9 +55,9 @@ public class Screen5AdapterHorizontal extends RecyclerView.Adapter<Screen5Adapte
     }
 
     //todo: rename class to holder
-    abstract class BaseAdapter extends RecyclerView.ViewHolder{
+    abstract class BaseHolder extends RecyclerView.ViewHolder{
 
-        BaseAdapter(View itemView) {
+        BaseHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
         }
@@ -74,7 +74,7 @@ public class Screen5AdapterHorizontal extends RecyclerView.Adapter<Screen5Adapte
     }
 
     //TODO: rename class
-    class childNotFirstAdapter extends BaseAdapter{
+    class childNotFirstHolder extends BaseHolder {
 
         @BindView(R.id.big_img_rcv_horizontal_screen5)
         CircleImageView big_img;
@@ -84,7 +84,7 @@ public class Screen5AdapterHorizontal extends RecyclerView.Adapter<Screen5Adapte
         CircleView icon_onl_or_not;
         @BindView(R.id.tv_name_rcv_horizontal_screen5)
         TextView tv_name;
-        public childNotFirstAdapter(View itemView) {
+        public childNotFirstHolder(View itemView) {
             super(itemView);
         }
 
@@ -100,9 +100,9 @@ public class Screen5AdapterHorizontal extends RecyclerView.Adapter<Screen5Adapte
     }
 
     //TODO: rename class
-    class childFirstAdapter extends BaseAdapter{
+    class childFirstHolder extends BaseHolder {
 
-        childFirstAdapter(View itemView) {
+        childFirstHolder(View itemView) {
             super(itemView);
         }
 

@@ -29,7 +29,7 @@ public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseView
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         BaseViewHolder baseViewHolder;
-        baseViewHolder = new ViewChild(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_inside_recycview_screen3,parent,false));
+        baseViewHolder = new viewChildHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_inside_recycview_screen3,parent,false));
         return baseViewHolder;
     }
 
@@ -66,7 +66,7 @@ public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseView
         abstract void onBinding(int position);
     }
 
-    class ViewChild extends BaseViewHolder{
+    class viewChildHolder extends BaseViewHolder{
 
         @BindView(R.id.text_inview_inrecycleview)
         TextView tV;
@@ -74,7 +74,7 @@ public class Screen3Adapter extends RecyclerView.Adapter<Screen3Adapter.BaseView
         CircleView ccv;
         @BindView(R.id.view_line_last_screen3)
                 View view;
-        ViewChild(View itemView) {
+        viewChildHolder(View itemView) {
             super(itemView);
         }
 
