@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by bangindong on 12/12/2017.
  */
 
-public class Data {
+public class DataPost {
 
     @SerializedName("data")
     @Expose
